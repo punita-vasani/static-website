@@ -1,0 +1,19 @@
+name: Static Website CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: List Files
+        run: ls -la
+
+      - name: Deployment Message
+        run: echo "Static website deployed successfully"
